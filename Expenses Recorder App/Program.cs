@@ -16,6 +16,7 @@ namespace Expenses_Recorder_App
 
             builder.Services.AddSession();
 
+
             var app = builder.Build();
             app.UseSession();
 
