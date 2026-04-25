@@ -1,0 +1,67 @@
+﻿@using Expenses_Recorder_App.Models.Application_Models.Expenses
+@model SalaryViewModel
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+    <div class="container-fluid">
+
+        <!-- Left side: ERP title -->
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
+            <span class="text-success fw-bold fs-4">$</span>
+            <span>Expense Recorder App</span>
+        </a>
+
+        <!-- Right side -->
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://abdelrahmanwalid.runasp.net/" target="_blank">
+                        Developer
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<br />
+
+<div class="container-fluid px-4">
+
+    <!-- Form Card -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="ChangeSalary" method="post">
+                <div class="d-flex justify-content-between mb-4">
+                    <div>
+                        <h5 class="mb-0">Change the Salary</h5>
+                        <small class="text-muted">
+                            Fill in the details below to change the salary
+                        </small>
+                    </div>
+
+                    <div class="col-md-8">
+                        <label class="form-label">Salary</label>
+                        <input asp-for="Salary"
+                               type="number"
+                               step="0.01"
+                               max="10000000"
+                               class="form-control" />
+                        <span asp-validation-for="Salary" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Save
+                </button>
+                <a asp-action="Index" class="btn btn-outline-dark">
+                    ← Back
+                </a>
+            </form>
+
+        </div>
+    </div>
+</div>

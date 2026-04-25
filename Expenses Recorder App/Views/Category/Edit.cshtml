@@ -1,0 +1,84 @@
+﻿@model Expenses_Recorder_App.Models.Application_Models.Categories.CategoryCreateEditViewModel
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+        <!-- Left side: ERP title -->
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
+            <span class="text-success fw-bold fs-4">$</span>
+            <span>Expense Recorder App</span>
+        </a>
+
+        <!-- Right side -->
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://abdelrahmanwalid.runasp.net/" target="_blank">
+                        Developer
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<br />
+
+<div class="container-fluid px-4">
+
+    <!-- Form Card -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <div class="d-flex justify-content-between mb-4">
+                <div>
+                    <h5 class="mb-0">Edit Category</h5>
+                    <small class="text-muted">
+                        Update the details below to modify the category
+                    </small>
+                </div>
+
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    ← Back
+                </a>
+            </div>
+
+            <form asp-action="Edit" method="post">
+
+                <div class="row g-3">
+
+                    <!-- Name -->
+                    <div class="col-12">
+                        <label class="form-label">Name</label>
+                        <input asp-for="Name"
+                               class="form-control"
+                               placeholder="Enter category name..." />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <!-- Note -->
+                    <div class="col-12">
+                        <label class="form-label">Note</label>
+                        <textarea asp-for="Note"
+                                  class="form-control"
+                                  rows="3"
+                                  placeholder="Optional note about this expense..."></textarea>
+                        <span asp-validation-for="Note" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-4 text-end">
+                    <button type="submit" class="btn btn-dark">
+                        + Save Category
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

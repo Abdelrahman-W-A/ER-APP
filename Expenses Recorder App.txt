@@ -1,0 +1,25 @@
+Expenses Recorder App:
+Categories:
+Id	    	(Automatic)
+Name		(Required)
+Note		(Optional)
+
+
+2. Expenses:
+Id 		(Automatic)
+CategoryName  (Required)
+Value		(Required)
+Date 		(Required)
+Note 		(Optional)
+ResetImage 	(Optional)
+
+
+3. User Authentication & Authorization:
+Email. 	(Required)
+Password.	(Required)
+
+
+
+Other Features:
+-Filtering based on month (Default Current month).
+-Dark Mode feature.
